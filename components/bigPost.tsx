@@ -14,7 +14,7 @@ const BigPost = () => {
           alt="test"
         />
       </div>
-      <div className="flex-1 max-w-screen-md pl-7 md:pl-12 pr-4 md:pr-0 mt-4">
+      <div className="flex-1 max-w-screen-md pl-4 md:pl-12 pr-4 md:pr-0 mt-4">
         <h4 className="text-2xl font-bold mb-4">Open Thread 191 + Madrid/Zurich Meetup Info</h4>
         <p className="mb-4">...</p>
         <PostActions />

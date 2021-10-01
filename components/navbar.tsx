@@ -10,7 +10,7 @@ const Navbar = () => {
     setOpen(!open);
   };
   return (
-    <div className="flex items-center justify-between w-full">
+    <div className="flex items-center justify-between w-full px-4">
       <div className="flex items-center">
         <Img src="/images/logo.png" size="w-12 h-12" corners="rounded-md" />
         <h4 className="ml-4">Astral Codex Ten</h4>

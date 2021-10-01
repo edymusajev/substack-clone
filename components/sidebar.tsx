@@ -44,7 +44,7 @@ const SidebarList = ({ list }: SidebarListProps) => {
 
 const Sidebar = () => {
   return (
-    <div>
+    <div className="px-4">
       <SidebarList list={placeholder} />
       <SidebarList list={placeholder} />
       {/* <div className="mb-8">

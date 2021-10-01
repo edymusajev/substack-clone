@@ -3,8 +3,8 @@ import ListItem from './listItem';
 const List = () => {
   return (
     <div>
-      <div className="px-4 mb-2">
-        <ul className="flex border-b pb-2 text-gray-500">
+      <div className="mb-2">
+        <ul className="flex border-b pb-2 text-gray-500 mx-4 ">
           <li className="mr-4 border-b border-blue-500 mb-0 text-blue-500 font-semibold text-sm">
             New
           </li>
@@ -15,7 +15,7 @@ const List = () => {
         </ul>
       </div>
 
-      <ul>
+      <ul className="">
         <ListItem title="Whither Tartaria?" date={'Feb 18'} />
         <ListItem title="Whither Tartaria?" date={'Feb 18'} />
         <ListItem title="Whither Tartaria?" date={'Feb 18'} />

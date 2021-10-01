@@ -11,7 +11,7 @@ p > a {
 
 @layer components {
   .container {
-    @apply max-w-screen-md w-full mx-4 h-full flex;
+    @apply max-w-screen-md w-full sm:mx-4 h-full flex;
   }
 }
 
