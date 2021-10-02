@@ -1,6 +1,12 @@
+import { AllPostsData } from '../interfaces';
 import ListItem from './listItem';
 
-const List = () => {
+const List = ({ allPostsData }: { allPostsData: AllPostsData[] }) => {
+  const renderList = () => {
+    return allPostsData.map((post) => (
+      <ListItem key={post.id} title={post.title} date={post.date} id={post.id} />
+    ));
+  };
   return (
     <div>
       <div className="mb-2">
@@ -16,13 +22,16 @@ const List = () => {
       </div>
 
       <ul className="">
+        {renderList()}
+        {/* <ListItem title="Whither Tartaria?" date={'Feb 18'} />
         <ListItem title="Whither Tartaria?" date={'Feb 18'} />
         <ListItem title="Whither Tartaria?" date={'Feb 18'} />
-        <ListItem title="Whither Tartaria?" date={'Feb 18'} />
-        <ListItem title="Whither Tartaria?" date={'Feb 18'} />
+        <ListItem title="Whither Tartaria?" date={'Feb 18'} /> */}
       </ul>
     </div>
   );
 };
+
+export const getStaticProps = async () => {};
 
 export default List;

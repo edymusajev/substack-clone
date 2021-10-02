@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -7,8 +7,23 @@ import Layout from '../components/layout';
 import List from '../components/list';
 import ListItem from '../components/listItem';
 import Sidebar from '../components/sidebar';
+import { AllPostsData } from '../interfaces';
+import { getSortedPostsData } from '../lib/posts';
 
-const Home: NextPage = () => {
+export const getStaticProps: GetStaticProps = async () => {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+};
+
+const Home = ({ allPostsData }: { allPostsData: AllPostsData[] }) => {
+  console.log(typeof allPostsData);
+  const renderPosts = () => {
+    return allPostsData.map((post) => <div key={post.id}>{post.title}</div>);
+  };
   return (
     <Layout home bigPost={<BigPost />}>
       <Head>
@@ -19,7 +34,7 @@ const Home: NextPage = () => {
       <div className="w-full">
         <div className="grid grid-cols-1 w-full sm:grid-cols-4 gap-8">
           <main className="col-span-3">
-            <List />
+            <List allPostsData={allPostsData} />
           </main>
           <aside className="col-span-1">
             <Sidebar />

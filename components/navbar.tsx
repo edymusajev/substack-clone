@@ -11,10 +11,13 @@ const Navbar = () => {
   };
   return (
     <div className="flex items-center justify-between w-full px-4">
-      <div className="flex items-center">
-        <Img src="/images/logo.png" size="w-12 h-12" corners="rounded-md" />
-        <h4 className="ml-4">Astral Codex Ten</h4>
-      </div>
+      <Link href="/">
+        <a className="flex items-center hover:cursor-pointer">
+          <Img src="/images/logo.png" size="w-12 h-12" corners="rounded-md" />
+          <h4 className="ml-4">Astral Codex Ten</h4>
+        </a>
+      </Link>
+
       <div className="flex items-center">
         <button className="px-3 py-3 bg-blue-400 text-white text-sm rounded-md mr-4">
           Subscribe
